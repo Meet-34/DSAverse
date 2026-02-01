@@ -56,12 +56,79 @@ int main(){
 
     cout << "Last element in the vector v: " << v.back() << endl;
 
+    for(vector<int>::iterator i = v.begin(); i != v.end(); i++){
+        cout << *(i) << " ";
+    }
+    cout << endl;
+
+    //auto keyword automatically assigns the dataType
+    for(auto i2 = v.begin(); i2 != v.end(); i2++){
+        cout << *(i2) << " ";
+    }
+    cout << endl;
+
+    //for each Loop
+    for(auto x: v){
+        cout << x << " ";
+    }
+    cout << endl;
+
+    //->Erase function
+    v.erase(v.begin() + 1);
+    for(auto x: v){
+        cout << x << " ";
+    }
+    cout << endl;
+
+    v.erase(v.begin() + 2, v.begin() + 3);
+    for(auto x: v){
+        cout << x << " ";
+    }
+    cout << endl;
+
+    v.push_back(8);
+    v.push_back(15);
+    v.push_back(85);
+    v.push_back(23);
+    v.push_back(35);
+    v.push_back(76);
+
+    //->Insert function
+    vector<int>v5(2, 100);
+    v5.insert(v5.begin(), 200);
+    v5.insert(v5.begin() + 1, 2, 10);
+    for(auto x: v5){
+        cout << x << " ";
+    }
+    cout << endl;
+
+    vector<int>copy(2, 26);
+    v5.insert(v5.begin(), copy.begin(), copy.end());
+    for(auto x: v5){
+        cout << x << " ";
+    }
+    cout << endl;
+
+    cout << "Size of vector v5: " << v5.size() << endl;
+
+    v5.pop_back();
+    for(auto x: v5){
+        cout << x << " ";
+    }
+    cout << endl;
+
+    v.swap(v5);
+    for(auto x: v5){
+        cout << x << " ";
+    }
+    cout << endl;
+
+    cout << v.empty() << endl;
     
+    //Used to erase the entire vector
+    v.clear();
 
-
-
-
-
+    cout << v.empty() << endl;
 }
 
 

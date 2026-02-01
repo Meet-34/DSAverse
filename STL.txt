@@ -19,4 +19,16 @@ Therefore, in order to print the last element, we must first decrement the itera
 --> vectorName.rbegin()
 rend() and rbegin() are rarely used. 
 
+Various functions used on vectors :- 
+vectorName.insert();
+vectorName.erase(); -> erases the element from the vector
+vectorName.push_back(); -> adds the element into the vector
+vectorName.emplace_back(); -> same as push_back but faster
+vectorName.size(); -> gives the size of the vector 
+vectorName.pop_back(); -> deletes the last element of the vector
+vector1Name.swap(vector2Name); -> swaps both of the vectors
+vectorName.clear(); -> erases the entire vector 
+vectorName.empty(); -> prints 1(true) if the vector is empty otherwise 0(false)
+
+
 
