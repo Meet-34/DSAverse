@@ -1,0 +1,7 @@
+C++ STL is divided mainly into 4 parts: 
+->Algrithms 
+->Containers
+->Functions
+->Iterators
+
+
