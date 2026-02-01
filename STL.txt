@@ -4,4 +4,19 @@ C++ STL is divided mainly into 4 parts:
 ->Functions
 ->Iterators
 
+How to print vector elements? 
+->Directly using the name of vector. 
+let name of vector is v.
+v[0] (To print the value at index 0 in vector)
+
+->Using Iterators. An iterator points to a memory address, not the element.
+Ierator can point to various memory location: 
+--> vectorName.begin()
+--> vectorName.end() 
+This doesn't point to the memory location of last element present in the vector instead it points to the memory address just after the last element. 
+Therefore, in order to print the last element, we must first decrement the iterator by one position.
+--> vectorName.rend()
+--> vectorName.rbegin()
+rend() and rbegin() are rarely used. 
+
 
