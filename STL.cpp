@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-    //Pairs
+    //!Pairs
 
     pair<int, int> p1 = {1, 3};
     cout << p1.first << " " << p1.second << endl;
@@ -16,7 +16,7 @@ int main(){
     cout << "Pair of elements at index 0: " << pairArray[0].first << " " << pairArray[0].second << endl;
     cout << "Pair of elements at index 2: " << pairArray[2].first << " " << pairArray[2].second << endl;
 
-    //Vectors - cointainer that is used to store values, dynamic in nature 
+    //!Vectors - cointainer that is used to store values, dynamic in nature 
 
     vector <int> v;
     v.push_back(1);
@@ -129,6 +129,67 @@ int main(){
     v.clear();
 
     cout << v.empty() << endl;
+
+    //! List
+
+    list<int>l;
+    l.push_back(5);
+    l.emplace_back(8);
+    l.push_front(11);
+    l.emplace_front(78);
+
+    for(auto x: l){
+        cout << x << " ";
+    }
+    cout << endl;
+    /*Rest all the functions of a list are same as vector
+    ->begin, end, rbegin, rend, clear, insert, size and swap */
+
+    //! Deque 
+
+    deque<int>dq;
+    dq.push_back(1);
+    dq.emplace_back(19);
+    dq.push_front(46);
+    dq.emplace_front(14);
+    for(auto x: dq){
+        cout << x << " ";
+    }
+    cout << endl;
+
+    dq.pop_back();
+    dq.pop_front();
+    for(auto x: dq){
+        cout << x << " ";
+    }
+    cout << endl;
+    
+    cout << dq.back() << endl;
+    cout << dq.front() << endl;
+    /*Rest all the functions of deque are same as vector
+    ->begin, end, rbegin, rend, clear, insert, size and swap */
+
+    //! Stack
+
+    stack<int>s;
+    s.push(45);
+    s.emplace(11);
+    s.push(16);
+    s.emplace(78);
+
+    cout << s.top() << endl;
+    s.pop();
+    cout << s.top() << endl;
+
+    cout << s.size() << endl;
+    cout << s.empty() << endl;
+
+    stack<int>s2;
+    s2.swap(s); 
+
+    cout << s2.top() << endl;
+
+
 }
 
 
