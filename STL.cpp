@@ -189,7 +189,52 @@ int main(){
 
     cout << s2.top() << endl;
 
+    //! Queue
 
+    queue<int>q;
+    q.push(11);
+    q.emplace(5);
+    q.push(9);
+    q.emplace(16);
+
+    cout << q.back() << endl;
+
+    q.back() += 2;
+    cout << q.back() << endl;
+
+    cout << q.front() << endl;
+    q.pop();
+    cout << q.front() << endl;
+//size, swap, empty functions are same as stack
+
+    //! Priority Queue - Stores the elements in descending order
+    priority_queue<int>pq;
+    pq.push(5);
+    pq.push(85);
+    pq.push(2);
+    pq.emplace(99);
+    pq.emplace(61);
+    pq.emplace(4);
+
+    cout << pq.top() << endl;
+    pq.pop();
+    cout << pq.top() << endl;
+//size, swap, empty functions are same as stack
+
+    //? Minimum Heap
+    priority_queue<int, vector<int>, greater<int>>pp;
+    pp.push(5);
+    pp.push(85);
+    pp.push(2);
+    pp.emplace(99);
+    pp.emplace(61);
+    pp.emplace(4);
+
+    cout << pp.top() << endl;
+    pp.pop();
+    cout << pp.top() << endl;
+    
+    //Time complexities, push & pop -> O(log n) and top -> O(1)
 }
 
 
