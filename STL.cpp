@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
     //!Pairs
-
+    cout << "Pairs: " << endl;
     pair<int, int> p1 = {1, 3};
     cout << p1.first << " " << p1.second << endl;
 
@@ -18,6 +18,7 @@ int main(){
 
     //!Vectors - cointainer that is used to store values, dynamic in nature 
 
+    cout << "Vector: " << endl;
     vector <int> v;
     v.push_back(1);
     v.push_back(5);
@@ -132,6 +133,7 @@ int main(){
 
     //! List
 
+    cout << "List: " << endl;
     list<int>l;
     l.push_back(5);
     l.emplace_back(8);
@@ -147,6 +149,7 @@ int main(){
 
     //! Deque 
 
+    cout << "Deque: " << endl;
     deque<int>dq;
     dq.push_back(1);
     dq.emplace_back(19);
@@ -171,6 +174,7 @@ int main(){
 
     //! Stack
 
+    cout << "Stack: " << endl;
     stack<int>s;
     s.push(45);
     s.emplace(11);
@@ -191,6 +195,7 @@ int main(){
 
     //! Queue
 
+    cout << "Queue: " << endl;
     queue<int>q;
     q.push(11);
     q.emplace(5);
@@ -208,6 +213,8 @@ int main(){
 //size, swap, empty functions are same as stack
 
     //! Priority Queue - Stores the elements in descending order
+
+    cout << "Priority Queue: " << endl;
     priority_queue<int>pq;
     pq.push(5);
     pq.push(85);
@@ -222,6 +229,8 @@ int main(){
 //size, swap, empty functions are same as stack
 
     //? Minimum Heap
+    
+    cout << "Minimum Heap: " << endl;
     priority_queue<int, vector<int>, greater<int>>pp;
     pp.push(5);
     pp.push(85);
@@ -235,6 +244,86 @@ int main(){
     cout << pp.top() << endl;
     
     //Time complexities, push & pop -> O(log n) and top -> O(1)
+
+    //! Set - stores everything in sorted order & unique 
+
+    cout << "Set: " << endl;
+    set<int>st;
+    st.insert(1);
+    st.emplace(2);
+    st.emplace(3);
+    st.emplace(7);
+    st.emplace(11);
+    st.emplace(13);
+    st.insert(15);
+    st.emplace(16);
+    st.insert(2);              //This won't insert 2 again as every element in a set is unique 
+    //The functionality of insert as in vector can also be used but it just increases the efficiency
+    //begin(), end(), rend(), rbegin(), size(), swap(), empty() work the same way as above
+
+    auto it7 = st.find(3);
+    //iterator points to the location of 3
+
+    auto it8 = st.find(6);
+    //As there is no element '6' in the container therefore, the iterator will point 
+
+    st.erase(2);
+    //deletes 2 and maintains the sorted order
+    for(auto x: st){
+        cout << x << " ";
+    }
+    cout << endl;
+
+    int cnt = st.count(4);
+    cout << cnt << endl;
+    //Can give 0 or 1, as there is only one single occurence of one element. 0 means element doesn't exist and vice versa
+
+    auto it3 = st.find(11);
+    st.erase(it3);                   // It takes constant time
+    for(auto x: st){
+        cout << x << " ";
+    }
+    cout << endl;
+
+    auto it1 = st.find(7);
+    auto it2 = st.find(16);
+    st.erase(it1, it2);
+    //used to erase everything in between 7(Inclusive) and 16(exclusive) [7, 16)
+    for(auto x: st){
+        cout << x << " ";
+    }
+    cout << endl;
+
+    auto it5 = st.lower_bound(2);
+    cout << *it5 << endl;
+
+    auto it11 = st.upper_bound(14);
+    cout << *it11 << endl;
+
+    //!Multiset - stores the elements in sorted order, but not unique(as in set)
+
+    multiset<int>ms;
+    //Stores all the 1's and 2's (repeating elements as well)
+    ms.insert(1);
+    ms.insert(2);
+    ms.insert(3);
+    ms.insert(1);
+    ms.insert(2);
+    ms.insert(1);
+    //{1, 1, 1, 2, 2, 3}
+
+    int count = ms.count(2);
+    //Counts the no. of occurences of 2
+
+    //Erases all the occurences of 1
+    ms.erase(1);
+    
+    //To erase a single 1, not all
+    ms.erase(ms.find(1));
+
+
+
+
 }
 
 

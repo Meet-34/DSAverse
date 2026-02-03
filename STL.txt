@@ -31,8 +31,19 @@ vectorName.clear(); -> erases the entire vector
 vectorName.empty(); -> prints 1(true) if the vector is empty otherwise 0(false)
 
 In list, we can directly use the push_front function instead of insert(as discussed in vector).
-List is a doubly linked list where vector is a singly linked list therefore, In terms of time complexity,
+List is a doubly linked list where vector is a dynamic array therefore, In terms of time complexity,
 push_front function in list is actually very cheap when compared to insert function in vectors.
+
+In set, everything happens in time complexity -> O(log n)
+Unordered set - only unique, not sorted 
+worst case time complexity - O(n)
+
+Map - stores unique keys in sorted order(similar to a set) 
+Multimap - allows to store duplicate keys(similar to multiset)
+Unordered map - only unique keys(similar to Unordered set)
+
+
+
 
 
 
